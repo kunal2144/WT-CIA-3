@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Christ University Campus Visit Feedback</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>Christ University Campus Visit Feedback</h1>
+        <form name="feedbackForm" onsubmit="return handleSubmit(event)">
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" />
+            </p>
+            <p>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" />
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" />
+            </p>
+            <p>
+                <label>What did you like most about the campus?</label><br />
+                <input
+                    type="checkbox"
+                    id="liked-student"
+                    name="liked"
+                    value="students"
+                />
+                <label for="liked-students">Students</label><br />
+                <input
+                    type="checkbox"
+                    id="liked-location"
+                    name="liked"
+                    value="location"
+                />
+                <label for="liked-location">Location</label><br />
+                <input
+                    type="checkbox"
+                    id="liked-campus"
+                    name="liked"
+                    value="campus"
+                />
+                <label for="liked-campus">Campus</label><br />
+                <input
+                    type="checkbox"
+                    id="liked-atmosphere"
+                    name="liked"
+                    value="atmosphere"
+                />
+                <label for="liked-atmosphere">Atmosphere</label><br />
+                <input
+                    type="checkbox"
+                    id="liked-dorm-rooms"
+                    name="liked"
+                    value="dorm-rooms"
+                />
+                <label for="liked-dorm-rooms">Dorm Rooms</label><br />
+                <input
+                    type="checkbox"
+                    id="liked-sports"
+                    name="liked"
+                    value="sports"
+                />
+                <label for="liked-sports">Sports</label>
+            </p>
+            <p>
+                <label
+                    >How did you become interested in Christ University?</label
+                ><br />
+                <input
+                    type="radio"
+                    id="interested-friends"
+                    name="interested"
+                    value="friends"
+                />
+                <label for="interested-friends">Friends</label><br />
+                <input
+                    type="radio"
+                    id="interested-television"
+                    name="interested"
+                    value="television"
+                />
+                <label for="interested-television">Television</label><br />
+                <input
+                    type="radio"
+                    id="interested-internet"
+                    name="interested"
+                    value="internet"
+                />
+                <label for="interested-internet">Internet</label><br />
+                <input
+                    type="radio"
+                    id="interested-other"
+                    name="interested"
+                    value="other"
+                />
+                <label for="interested-other">Other</label>
+            </p>
+            <p>
+                <label for="comments">Additional Comments:</label><br />
+                <textarea
+                    id="comments"
+                    name="comments"
+                    rows="4"
+                    cols="40"
+                ></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Reset" />
+            </p>
+        </form>
+    </body>
+</html>

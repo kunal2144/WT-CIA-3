@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="library">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="books" type="bookList"/>
+        <xs:element name="members" type="memberList"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="bookList">
+    <xs:sequence>
+      <xs:element name="book" type="bookType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="bookType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="author" type="xs:string"/>
+      <xs:element name="year" type="xs:gYear"/>
+      <xs:element name="publisher" type="xs:string"/>
+      <xs:element name="isbn" type="xs:string"/>
+      <xs:element name="copies" type="copyList"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="copyList">
+    <xs:sequence>
+      <xs:element name="copy" type="copyType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="copyType">
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="available" type="xs:boolean" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="memberList">
+    <xs:sequence>
+      <xs:element name="member" type="memberType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="memberType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="email" type="xs:string"/>
+      <xs:element name="address" type="xs:string"/>
+      <xs:element name="phone" type="xs:string"/>
+      <xs:element name="borrowed" type="borrowedList"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="borrowedList">
+    <xs:sequence>
+      <xs:element name="book" type="borrowedBookType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="borrowedBookType">
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="copy" type="xs:string" use="required"/>
+  </xs:complexType>
+</xs:schema>

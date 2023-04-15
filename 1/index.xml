@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <books>
+    <book id="001">
+      <title>The Hitchhiker's Guide to the Galaxy</title>
+      <author>Douglas Adams</author>
+      <year>1979</year>
+      <publisher>Pan Books</publisher>
+      <isbn>0-330-25864-8</isbn>
+      <copies>
+        <copy id="001a" available="true"/>
+        <copy id="001b" available="false"/>
+      </copies>
+    </book>
+    <book id="002">
+      <title>To Kill a Mockingbird</title>
+      <author>Harper Lee</author>
+      <year>1960</year>
+      <publisher>J. B. Lippincott Co.</publisher>
+      <isbn>0-06-112008-1</isbn>
+      <copies>
+        <copy id="002a" available="true"/>
+        <copy id="002b" available="true"/>
+        <copy id="002c" available="false"/>
+      </copies>
+    </book>
+  </books>
+  <members>
+    <member id="001">
+      <name>John Doe</name>
+      <email>john.doe@gmail.com</email>
+      <address>#41/5, Main St., Anytown, India</address>
+      <phone>+91980588880</phone>
+      <borrowed>
+        <book id="002" copy="002c"/>
+      </borrowed>
+    </member>
+    <member id="002">
+      <name>Jane Doe</name>
+      <email>jane.doe@yahoo.co.in</email>
+      <address>RR St., That Town, India</address>
+      <phone>+91984733980</phone>
+      <borrowed>
+        <book id="001" copy="001b"/>
+      </borrowed>
+    </member>
+  </members>
+</library>
